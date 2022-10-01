@@ -66,7 +66,7 @@ public class Jump : MonoBehaviour
 
         if (isGrounded == true && preJump)
         {
-            jumpForce += 10f * Time.deltaTime;
+            jumpForce += 12f * Time.deltaTime;
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.sharedMaterial = bounceMat;
 
