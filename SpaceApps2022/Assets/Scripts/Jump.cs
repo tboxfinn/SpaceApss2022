@@ -12,8 +12,10 @@ public class Jump : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
 
-
-    GameManager gameManager;
+    //PanelControl
+    public static int PanelControl;
+    //imagespanel
+    public static int index;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,12 +34,11 @@ public class Jump : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("JamesWebb_Mirror"))
+        if (collision.gameObject.CompareTag("Mirror"))
         {
-            gameManager.Display_JWSTPanel();
-            Debug.Log("Hola");
+            PanelControl = 1;
         }
     }
+
 
 }

@@ -5,43 +5,100 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameObject JWST_Panel;
-    public static GameObject Mirror_Image;
-    public static TextMeshProUGUI Title_Text, Description_Text;
-    public static bool IsJWSTPanelHide;
+
+    //PanelControl
+    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text;
+    //images Panel
+    public GameObject[] images;
+
     // Start is called before the first frame update
     void Start()
     {
-        //JamesWebbPanels
-        JWST_Panel = GameObject.FindGameObjectWithTag("Panel JWST");
-        Mirror_Image = GameObject.FindGameObjectWithTag("Mirror_Tag");
+     
+        
+        //PanelControl
+
     }
+
     // Update is called once per frame
     void Update()
     {
-        
+
+        //PanelControl
+        if (Jump.PanelControl == 1)
+        {
+            Mirror1();
+        }
+        else if (Jump.PanelControl == 2)
+        {
+            Mirror2();
+        }
+        else if (Jump.PanelControl == 3)
+        {
+            antenna();
+        }
+        else if (Jump.PanelControl == 4)
+        {
+            CTools();
+        }
+        else if (Jump.PanelControl == 5)
+        {
+            StabilizationFlap();
+        }
+        else if (Jump.PanelControl == 6)
+        {
+            SunGuard();
+        }
+        else if (Jump.PanelControl == 7)
+        {
+            SpaceshipPlatform();
+        }
+
     }
 
 
-    public void Display_JWSTPanel()
+    //PanelControl
+    void Mirror1()
     {
-        if (IsJWSTPanelHide == true)
-        {
-            JWST_Panel.SetActive(true);
-            IsJWSTPanelHide = false;
-        }
-        else if (IsJWSTPanelHide == false)
-        {
-            JWST_Panel.SetActive(false);
-            IsJWSTPanelHide = true;
-        }
+        Title_Text.text = "Hola";
+        Description_Text.text = "este es un texto de prueba. este es un texto de prueba. este es un texto de prueba. este es un texto de prueba. este es un texto de prueba";
+    }
+    void Mirror2()
+    {
 
-        JamesWebb_Mirror();
+    }
+    void antenna()
+    {
+
+    }
+    void CTools()
+    {
+
+    }
+    void StabilizationFlap()
+    {
+
+    }
+    void SunGuard()
+    {
+
+    }
+    void SpaceshipPlatform()
+    {
+
     }
 
-    public void JamesWebb_Mirror()
+    public void Display()
     {
-        Title_Text.text = "Bakugo";
-        Description_Text.text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        if (Jump.index == 0)
+        {
+            images[0].gameObject.SetActive(true);
+        }
+
+        for(int i = 0; i < images.Length; i++)
+        {
+            images[i].gameObject.SetActive(false);
+            images[Jump.index].gameObject.SetActive(true);
+        }
     }
 }
