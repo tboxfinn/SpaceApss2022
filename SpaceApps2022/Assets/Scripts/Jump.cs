@@ -25,6 +25,6 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        isGrounded = 
+        isGrounded = true;
     }
 }
