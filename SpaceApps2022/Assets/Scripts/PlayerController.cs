@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private GatherInput gI;
-    private Animator anim;
+    //private Animator anim;
 
     public float rayLength;
     public bool grounded;
@@ -29,13 +29,13 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gI = GetComponent<GatherInput>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         Flip();
-        SetAnimatorValues();
+        //SetAnimatorValues();
         PlayerJump();
         CheckStatus();
         PlayerMove();
@@ -114,11 +114,11 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(checkPointRight.position, Vector2.down * rayLength, color2);
     }
 
-    private void SetAnimatorValues()
+    /*private void SetAnimatorValues()
     {
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("vSpeed", rb.velocity.y);
         anim.SetBool("grounded", grounded);
         anim.SetBool("preJump", preJump);
-    }
+    }*/
 }
