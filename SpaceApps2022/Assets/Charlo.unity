@@ -734,7 +734,7 @@ MonoBehaviour:
   jumpForce: 0
   isGrounded: 0
   feetPos: {fileID: 103199010}
-  checkRadius: 10
+  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -742,6 +742,7 @@ MonoBehaviour:
   preJump: 0
   bounceMat: {fileID: 6200000, guid: c9da916974759c146b8576e87d0b607a, type: 2}
   normalMat: {fileID: 6200000, guid: c6b65419cc7e2604d83c333539720d71, type: 2}
+  limite: 22
 --- !u!50 &677711788
 Rigidbody2D:
   serializedVersion: 4
@@ -757,7 +758,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -908,7 +909,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.74
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

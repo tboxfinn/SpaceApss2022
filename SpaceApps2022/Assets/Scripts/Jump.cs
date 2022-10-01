@@ -22,7 +22,8 @@ public class Jump : MonoBehaviour
     public bool preJump = false;
     public PhysicsMaterial2D bounceMat, normalMat;
 
-    private int direction = 1;
+    private float direction = 1;
+    [SerializeField] private float limite;
 
 
     private void Start()
@@ -40,7 +41,8 @@ public class Jump : MonoBehaviour
     private void PlayerMove()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        if (isGrounded && !preJump)
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
     private void Flip()
     {
@@ -59,26 +61,38 @@ public class Jump : MonoBehaviour
 
     private void PlayerJump()
     {
+
+        direction = Input.GetAxisRaw("Horizontal");
+
         if (isGrounded == true && preJump)
         {
-            jumpForce += 2f * Time.deltaTime;
+            jumpForce += 10f * Time.deltaTime;
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.sharedMaterial = bounceMat;
 
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && jumpForce < limite)
         {
+
             preJump = true;
         }
-        else if (preJump)
+        else if (preJump || jumpForce >= limite)
         {
             preJump = false;
-            rb.velocity = new Vector2(0, jumpForce);
+
+            rb.AddForce(new Vector2(direction, 1) * jumpForce, ForceMode2D.Impulse);
+
         }
 
         if (rb.velocity.y <= -1)
         {
+
+
             rb.sharedMaterial = normalMat;
+        }
+        if (rb.velocity.y >= 1)
+        {
+            jumpForce = 0;
         }
     }
     private void ResetJump()
