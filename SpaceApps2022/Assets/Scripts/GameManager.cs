@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     //images Panel
     public GameObject panel;
     public GameObject image;
+    public static bool OnPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +35,15 @@ public class GameManager : MonoBehaviour
         Description_Text.text = data.itemDescription;
         image.GetComponent<Image>().sprite = data.itemImage;
         panel.SetActive(true);
+        Time.timeScale = 0;
+        OnPanel = true;
+    }
+
+    public void Closedisplay()
+    {
+        panel.SetActive(false);
+
+        Time.timeScale = 1;
+        OnPanel = false;
     }
 }

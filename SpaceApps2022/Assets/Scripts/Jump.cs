@@ -12,9 +12,8 @@ public class Jump : MonoBehaviour
     private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
-
     //PanelControl
-    public static int PanelControl;
+    [SerializeField] float JumpForce;
     //imagespanel
     public static int index;
     private void Start()
@@ -31,6 +30,11 @@ public class Jump : MonoBehaviour
     void Update()
     {
         isGrounded = true;
+
+        if (Input.GetKeyDown(KeyCode.Space) && GameManager.OnPanel == false)
+        {
+            rb.AddForce(Vector2.up * JumpForce);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +42,7 @@ public class Jump : MonoBehaviour
         if (collision.gameObject.CompareTag("InfoItem"))
         {
             gameManager.Display(collision.gameObject.GetComponent<DataDisplay>().data);
+
         }
     }
 
