@@ -12,6 +12,8 @@ public class Jump : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
 
+
+    GameManager gameManager;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,4 +29,15 @@ public class Jump : MonoBehaviour
     {
         isGrounded = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("JamesWebb_Mirror"))
+        {
+            gameManager.Display_JWSTPanel();
+            Debug.Log("Hola");
+        }
+    }
+
 }
