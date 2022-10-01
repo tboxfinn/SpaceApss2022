@@ -70,10 +70,10 @@ public class Jump : MonoBehaviour
         {
             preJump = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && jumpForce >= 20.0f || Input.GetKeyDown(KeyCode.Space) == false && jumpForce >= 0.1f)
+        if (Input.GetKeyUp(KeyCode.Space) && isGrounded == true )
         {
             rb.velocity = Vector2.up * jumpForce;
-            Invoke("ResetJump", 0.025f);
+            
         }
         if (rb.velocity.y <= -1)
         {
@@ -89,6 +89,7 @@ public class Jump : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
     }
+
     /*void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position,checkRadius,whatIsGround);
