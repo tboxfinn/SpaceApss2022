@@ -8,6 +8,7 @@ public class Jump : MonoBehaviour
     public float speed;
     private float moveInput;
 
+    [SerializeField] private GameManager gameManager;
     private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
@@ -34,9 +35,9 @@ public class Jump : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Mirror"))
+        if (collision.gameObject.CompareTag("InfoItem"))
         {
-            PanelControl = 1;
+            gameManager.Display(collision.gameObject.GetComponent<DataDisplay>().data);
         }
     }
 
