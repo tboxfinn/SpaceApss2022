@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
-   
+
 
     public bool isGrounded;
     public Transform feetPos;
@@ -59,22 +59,23 @@ public class Jump : MonoBehaviour
 
     private void PlayerJump()
     {
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded == true && preJump)
         {
-            jumpForce += 0.5f;
+            jumpForce += 2f * Time.deltaTime;
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.sharedMaterial = bounceMat;
+
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
             preJump = true;
         }
-        else
+        else if (preJump)
         {
             preJump = false;
+            rb.velocity = new Vector2(0, jumpForce);
         }
-        if (Input.GetKeyUp(KeyCode.Space) && isGrounded == true )
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            
-        }
+
         if (rb.velocity.y <= -1)
         {
             rb.sharedMaterial = normalMat;
@@ -89,7 +90,6 @@ public class Jump : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
     }
-
     /*void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position,checkRadius,whatIsGround);

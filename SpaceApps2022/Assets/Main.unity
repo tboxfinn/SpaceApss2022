@@ -856,7 +856,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -875,17 +875,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 0
-  isGrounded: 0
+  jumpForce: 5
   feetPos: {fileID: 968289196}
   checkRadius: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpTime: 0.4
-  preJump: 0
-  bounceMat: {fileID: 6200000, guid: c9da916974759c146b8576e87d0b607a, type: 2}
-  normalMat: {fileID: 6200000, guid: c6b65419cc7e2604d83c333539720d71, type: 2}
+  jumpTime: 0.1
 --- !u!114 &1240563294
 MonoBehaviour:
   m_ObjectHideFlags: 0
