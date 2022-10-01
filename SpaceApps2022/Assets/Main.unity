@@ -594,6 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1062786007}
   - component: {fileID: 1062786006}
+  - component: {fileID: 1062786008}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -651,6 +652,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1062786008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062786005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c093879d2cfcb44d927612b3f1ea245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 519420028}
+  vcam: {fileID: 1062786006}
+  isActive: 0
 --- !u!1 &1240563287
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +680,7 @@ GameObject:
   - component: {fileID: 1240563291}
   - component: {fileID: 1240563288}
   - component: {fileID: 1240563292}
+  - component: {fileID: 1240563293}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -797,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: b74f99b5dfa77ea4dbddf5eba3bece56, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -812,6 +829,20 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
+--- !u!114 &1240563293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240563287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ccbc8719d03504db121f83e6c8ee00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueX: 0
+  jumpInput: 0
