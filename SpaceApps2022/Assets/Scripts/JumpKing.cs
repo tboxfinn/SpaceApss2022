@@ -15,6 +15,7 @@ public class JumpKing : MonoBehaviour
     public float jumpValue = 0.0f;
 
     public Animator animator;
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     void Start()
     {
@@ -78,6 +79,7 @@ public class JumpKing : MonoBehaviour
             float tempy = jumpValue;
             rb.velocity = new Vector2(tempx, tempy);
             Invoke("ResetJump", 0.2f);
+            jumpSoundEffect.Play();
 
         }
 
@@ -88,9 +90,11 @@ public class JumpKing : MonoBehaviour
             {
                 rb.velocity = new Vector2(moveInput * walkSpeed, jumpValue);
                 jumpValue = 0.0f;
+                jumpSoundEffect.Play();
             }
             canJump = true;
             animator.SetBool("IsCharging", false);
+            
         }
     }
 
@@ -106,4 +110,6 @@ public class JumpKing : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f), new Vector2(0.9f, 0.2f));
     }
+
+
 }
