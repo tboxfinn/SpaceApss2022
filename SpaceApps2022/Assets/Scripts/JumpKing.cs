@@ -25,7 +25,8 @@ public class JumpKing : MonoBehaviour
     {
         
         moveInput = Input.GetAxisRaw("Horizontal");
-
+        
+        //esto es para rotar dependiendo de si le doy izquierda o derecha, me lo enseño drolejan
         if (moveInput > 0)
         {
             transform.localScale = new Vector2(1, 1);
@@ -37,15 +38,16 @@ public class JumpKing : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
+        //aqui es como me muevo derecha o izq
         if (jumpValue == 0.0f && isGrounded)
         {
-            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
-              
+            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);     
         }
-
+        //esto checa que el jugador este en el suelo
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f),
         new Vector2(0.9f, 0.4f), 0f, groundMask);
 
+        //no se que hace pero me hace rebotar creo
         if (jumpValue > 0)
         {
             rb.sharedMaterial = bounceMat;
@@ -55,6 +57,7 @@ public class JumpKing : MonoBehaviour
             rb.sharedMaterial = normalMat;
         }
 
+        // carga el jumpvalue mientras dejes el espacio precionado y estes en ground
         if (Input.GetKey("space") && isGrounded && canJump)
         {
             jumpValue += 0.11f;
@@ -64,10 +67,11 @@ public class JumpKing : MonoBehaviour
 
         if (Input.GetKeyDown("space") && isGrounded && canJump)
         {
-            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+            rb.velocity = new Vector2(0.0f, rb.velocity.y); //define la velocidad de y para el salto
             animator.SetBool("IsCharging", true);
         }
 
+        //cuando llega a 20f el jump value y esta en el suelo saltas
         if (jumpValue >= 20f && isGrounded)
         {
             float tempx = moveInput * walkSpeed;
@@ -77,6 +81,7 @@ public class JumpKing : MonoBehaviour
 
         }
 
+        //si sueltas el espacio saltas
         if (Input.GetKeyUp("space"))
         {
             if (isGrounded)
