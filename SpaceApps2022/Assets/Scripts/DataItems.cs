@@ -9,4 +9,5 @@ public class DataItems : ScriptableObject
     public string itemName;
     public string itemDescription;
     public Sprite itemImage;
+    public Sprite itemImage2;
 }

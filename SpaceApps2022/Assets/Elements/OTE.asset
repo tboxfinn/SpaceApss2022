@@ -17,3 +17,4 @@ MonoBehaviour:
     mirrors that gather the light coming from space and gives it to the science instruments,
     how kind!  '
   itemImage: {fileID: 21300000, guid: a37b7f47ea1c215419dec2da880d785f, type: 3}
+  itemImage2: {fileID: 21300000, guid: e2ca65ea2b7613e46a2f66e517c23569, type: 3}
