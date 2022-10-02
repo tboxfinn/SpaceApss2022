@@ -840,9 +840,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  gameManager: {fileID: 1267118778}
+  jumpForce: 0
+  isGrounded: 0
   feetPos: {fileID: 0}
   checkRadius: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpTime: 0
+  preJump: 0
+  bounceMat: {fileID: 0}
+  normalMat: {fileID: 0}
+  limite: 0
 --- !u!1 &1267118777
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,8 +883,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title_Text: {fileID: 2102114407}
   Description_Text: {fileID: 319716746}
-  panel: {fileID: 1402588280}
+  TitleText2: {fileID: 0}
+  DescriptionText2: {fileID: 0}
+  piecesText: {fileID: 0}
+  MenuTitle: {fileID: 0}
+  pieces: 0
+  GamePanel: {fileID: 0}
+  MenuPanel: {fileID: 0}
+  PausePanel: {fileID: 0}
+  PanelWin: {fileID: 0}
   image: {fileID: 923344280}
+  image2: {fileID: 0}
+  SecondImage: {fileID: 0}
+  Congratulations: {fileID: 0}
+  InfoPanel: {fileID: 0}
+  PanelContent: {fileID: 0}
+  Player: {fileID: 0}
+  SpanishBtnMenu: {fileID: 0}
+  EnglishBtnMenu: {fileID: 0}
+  SpanishBtnPause: {fileID: 0}
+  EnglishBtnPause: {fileID: 0}
+  Panel_anim: {fileID: 0}
 --- !u!4 &1267118779
 Transform:
   m_ObjectHideFlags: 0
