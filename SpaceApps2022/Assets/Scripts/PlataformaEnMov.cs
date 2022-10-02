@@ -13,6 +13,8 @@ public class PlataformaEnMov : MonoBehaviour
 
     private Vector3 MoverHacia;
 
+    public Animator animator;
+
     void Start()
     {
         MoverHacia = EndPoint.position;
