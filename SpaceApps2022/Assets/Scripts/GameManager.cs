@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public static bool OnPanel, OnPause, OnMenu, OnGame, SpanishBool;
     public Animator Panel_anim;
     public static string GameStat;
+    //images Panel
+    public GameObject[] images;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,7 @@ public class GameManager : MonoBehaviour
         //PanelControl
         InfoPanel.SetActive(false);
         PanelContent.SetActive(false);
-        PanelWin.SetActive(false);
+
 
     }
 
