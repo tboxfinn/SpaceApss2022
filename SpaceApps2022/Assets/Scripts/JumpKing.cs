@@ -24,15 +24,16 @@ public class JumpKing : MonoBehaviour
 
     void Update()
     {
-        
+
         moveInput = Input.GetAxisRaw("Horizontal");
-        
-        //esto es para rotar dependiendo de si le doy izquierda o derecha, me lo enseño drolejan
+
+        //esto es para rotar dependiendo de si le doy izquierda o derecha, me lo enseï¿½o drolejan
         if (moveInput > 0)
         {
             transform.localScale = new Vector2(1, 1);
 
-        }else if (moveInput < 0)
+        }
+        else if (moveInput < 0)
         {
             transform.localScale = new Vector2(-1, 1);
         }
@@ -42,7 +43,7 @@ public class JumpKing : MonoBehaviour
         //aqui es como me muevo derecha o izq
         if (jumpValue == 0.0f && isGrounded)
         {
-            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);     
+            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
         }
         //esto checa que el jugador este en el suelo
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f),
@@ -61,7 +62,7 @@ public class JumpKing : MonoBehaviour
         // carga el jumpvalue mientras dejes el espacio precionado y estes en ground
         if (Input.GetKey("space") && isGrounded && canJump)
         {
-            jumpValue += 0.11f;
+            jumpValue += 12f * Time.deltaTime;
             animator.SetBool("IsCharging", true);
 
         }
@@ -94,11 +95,11 @@ public class JumpKing : MonoBehaviour
             }
             canJump = true;
             animator.SetBool("IsCharging", false);
-            
+
         }
     }
 
-    void ResetJump()  
+    void ResetJump()
     {
         canJump = false;
         jumpValue = 0;
