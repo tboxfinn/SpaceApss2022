@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: MIRI
   m_EditorClassIdentifier: 
   itemName: MID-INFRARED INSTRUMENT (MIRI)
+  ItemNameSpanish: Instrumento infrarojo medio
   itemDescription: Can you imagine having super hero eyes? Well, the MIRI sees light
     just like that since it can detect wavelengths that are longer than our human
     eyes can see.
+  itemDescriptionSpanish: "\xBFTe imaginas tener ojos de super h\xE9roe? Bueno, el
+    MIRI ve la luz de esa manera ya que puede detectar longitudes de ondas que son
+    imposibles que nuestros ojos humanos perciban."
   itemImage: {fileID: 21300000, guid: 8f69bd76f19090f42894c1e895476c93, type: 3}
   itemImage2: {fileID: 21300000, guid: 6031394acdfd3a348b50d91305a06d30, type: 3}

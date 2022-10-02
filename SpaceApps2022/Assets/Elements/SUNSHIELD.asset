@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: SUNSHIELD
   m_EditorClassIdentifier: 
   itemName: SUNSHIELD
+  ItemNameSpanish: parasol
   itemDescription: "In order for the the James Webb Space Telescope to be able to
     do its job i must be kept extremely cold and that\u2019s how the sunshield helps
     since it protects the JWST from external sources of light. Sorry Sun, not today!"
+  itemDescriptionSpanish: " n order for the the James Webb Space Telescope to be
+    able to do its job it must be kept extremely cold and that\u2019s how the sunshield
+    helps since it protects the JWST from external sources of light. Sorry Sun, not
+    today! Para que el Telescopio Espacial James Webb pueda funcionar debe mantenerse
+    extremadamente fr\xEDo y as\xED es como este artefacto ayuda ya que protege este
+    telescopio de fuentes externas de luces como el sol."
   itemImage: {fileID: 21300000, guid: 05abe9f4d196ff447969dea292b84d0d, type: 3}
   itemImage2: {fileID: 21300000, guid: a6ddccb48f12f8241bda71a468068903, type: 3}

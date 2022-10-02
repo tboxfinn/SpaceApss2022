@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: NIRSPEC
   m_EditorClassIdentifier: 
   itemName: NEAR INFRARED SPECTROGRAPH (NIRSPEC)
+  ItemNameSpanish: Espectografo infrarojo cercano (nirspec)
   itemDescription: "The first galaxies to form after the Big Bang are so faint that
     it would take hundreds of hours in order to collect enough information about
     them but that\u2019s no problem for the James Webb Space Telescope since it is
     designed to observe 100 objects simultaneously!"
+  itemDescriptionSpanish: "Las primeras galaxias en formarse despu\xE9s del Big Bang
+    son tan tenues que tomar\xEDa cientos de horas para reunir la informaci\xF3n
+    necesaria para verlas pero eso no es problema para el Telescopio Espacial James
+    Webb ya que \xA1est\xE1 dise\xF1ado para observar hasta 100 objetos simult\xE1neamente,
+    es decir, al mismo tiempo!"
   itemImage: {fileID: 21300000, guid: b1e4abd304d5efd4bb15aad5a4fa1792, type: 3}
   itemImage2: {fileID: 21300000, guid: 933c3b6a106a63d40aba2aed5505dba1, type: 3}

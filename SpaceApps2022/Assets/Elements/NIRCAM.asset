@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: NIRCAM
   m_EditorClassIdentifier: 
   itemName: NEAR INFRARED CAMERA (NIRCAM)
+  ItemNameSpanish: camara infraroja cercana (nircam)
   itemDescription: Makes it possible to view the dimmer objects nearby - just like
     shielding the sun from your eyes with an upraised hand can allow you to focus
     on the view in front of you, it detects lights from the earliest stars and galaxies
     in the process of formation, the population of stars in nearby galaxies, as well
     as young stars in the Milky Way and Kuiper Belt objects!
+  itemDescriptionSpanish: "Hace posible ver los objetos cercanos que pueden verse
+    empa\xF1ados - justo como lo har\xEDas si pones tu mano frente a tus ojos para
+    ocultarlos de la luz del sol, \xA1detecta la luz de las estrellas y galaxias
+    mas tempranas en proceso de formaci\xF3n, el poblado de estrellas en galaxias
+    cercanas, as\xED como j\xF3venes estrellas en la V\xEDa L\xE1ctea y objetos del
+    cintur\xF3n de Kuiper!"
   itemImage: {fileID: 21300000, guid: 8d4f1e2b349a58149ab87afb8f29885f, type: 3}
   itemImage2: {fileID: 21300000, guid: fa637787c1e0b9743bb254f3740403b6, type: 3}

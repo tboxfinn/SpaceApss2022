@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: OTE
   m_EditorClassIdentifier: 
   itemName: OPTICAL TELESCOPE ELEMENT (OTE)
-  ItemNameSpanish: hola soy homelo chino
+  ItemNameSpanish: ELEMENTO DE TELESCOPIO OPTICO (OTE)
   itemDescription: 'This is the eye of the James Webb Space Telescope! It has many
     mirrors that gather the light coming from space and gives it to the science instruments,
     how kind!  '
-  itemDescriptionSpanish: soy homelo pelo homelo chino
+  itemDescriptionSpanish: "\xA1Es el ojo del Telescopio Espacial James Webb! Tiene
+    muchos espejos que juntan la luz proveniente del espacio y se lo da a los instrumentos
+    cient\xEDficos \xA1qu\xE9 amable!"
   itemImage: {fileID: 21300000, guid: a37b7f47ea1c215419dec2da880d785f, type: 3}
   itemImage2: {fileID: 21300000, guid: e2ca65ea2b7613e46a2f66e517c23569, type: 3}
