@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
         EnglishBtnPause.SetActive(false);
         SpanishBtnPause.SetActive(true);
         SpanishBool = false;
-        MenuTitle.text = "James Webb Space Telescope";
+        MenuTitle.text = "webb's journey";
     }
 
     public void Spanish()
@@ -175,6 +175,6 @@ public class GameManager : MonoBehaviour
         SpanishBtnMenu.SetActive(false);
         EnglishBtnMenu.SetActive(true);
         SpanishBool = true;
-        MenuTitle.text = "Telescopio Espacial James Webb";
+        MenuTitle.text = "el viaje de webb";
     }
 }

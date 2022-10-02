@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: 83397e8d61dc11f45ac3c641af643b14
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2746396895036516046
+    second: Fotos_Boton_15_0
+  - first:
+      213: 5617138661385231780
+    second: Fotos_Boton_15_1
+  - first:
+      213: -8957474545371700857
+    second: Fotos_Boton_15_2
+  - first:
+      213: -2083633222471874693
+    second: Fotos_Boton_15_3
+  - first:
+      213: 7700051815952278552
+    second: Fotos_Boton_15_4
+  - first:
+      213: -9051941226152935312
+    second: Fotos_Boton_15_5
+  - first:
+      213: -1428719240884552909
+    second: Fotos_Boton_15_6
+  - first:
+      213: -842484940072272120
+    second: Fotos_Boton_15_7
+  - first:
+      213: 6855865842574411456
+    second: Fotos_Boton_15_8
+  - first:
+      213: -4762613401144128798
+    second: Fotos_Boton_15_9
+  - first:
+      213: -7263601051078254428
+    second: Fotos_Boton_15_10
+  - first:
+      213: 1733784307568245137
+    second: Fotos_Boton_15_11
+  - first:
+      213: -8620330157221885070
+    second: Fotos_Boton_15_12
+  - first:
+      213: -5762572559794134655
+    second: Fotos_Boton_15_13
+  - first:
+      213: -5869091439288466681
+    second: Fotos_Boton_15_14
+  - first:
+      213: -5420650331011469977
+    second: Fotos_Boton_15_15
+  - first:
+      213: -35600222625955714
+    second: Fotos_Boton_15_16
+  - first:
+      213: -8060893648651229556
+    second: Fotos_Boton_15_17
+  - first:
+      213: -6730354570005601385
+    second: Fotos_Boton_15_18
+  - first:
+      213: 8899444310830027808
+    second: Fotos_Boton_15_19
+  - first:
+      213: -7357317726795223956
+    second: Fotos_Boton_15_20
+  - first:
+      213: -4495169108258852990
+    second: Fotos_Boton_15_21
+  - first:
+      213: 202608504647704235
+    second: Fotos_Boton_15_22
+  - first:
+      213: -4479914188929443432
+    second: Fotos_Boton_15_23
+  - first:
+      213: -8870624184578447456
+    second: Fotos_Boton_15_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +107,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +116,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 39
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +150,570 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fotos_Boton_15_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec623eccc692d1620800000000000000
+      internalID: 2746396895036516046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4addaf50ad514fd40800000000000000
+      internalID: 5617138661385231780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78124861c58a0b380800000000000000
+      internalID: -8957474545371700857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b778c5caf927513e0800000000000000
+      internalID: -2083633222471874693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814efe974541cda60800000000000000
+      internalID: 7700051815952278552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070c07ff96b016280800000000000000
+      internalID: -9051941226152935312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b7f4b8b6b2c2ce0800000000000000
+      internalID: -1428719240884552909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f30622964ee44f0800000000000000
+      internalID: -842484940072272120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_8
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6c16ee8ade42f50800000000000000
+      internalID: 6855865842574411456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_9
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea0a46585cc7edb0800000000000000
+      internalID: -4762613401144128798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_10
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0a3580451823b90800000000000000
+      internalID: -7263601051078254428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_11
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19970c944a3af0810800000000000000
+      internalID: 1733784307568245137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_12
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bc33cf46f6e5880800000000000000
+      internalID: -8620330157221885070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_13
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181ae0dc9ca3700b0800000000000000
+      internalID: -5762572559794134655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_14
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703cce68e6ccc8ea0800000000000000
+      internalID: -5869091439288466681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_15
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d25786e3bf5c4b0800000000000000
+      internalID: -5420650331011469977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_16
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70847049c5818ff0800000000000000
+      internalID: -35600222625955714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_17
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86e0fb5fe3f12090800000000000000
+      internalID: -8060893648651229556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_18
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793a3627d2af892a0800000000000000
+      internalID: -6730354570005601385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_19
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024156d037d218b70800000000000000
+      internalID: 8899444310830027808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_20
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cafaa128e85e990800000000000000
+      internalID: -7357317726795223956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_21
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28febe03383fd91c0800000000000000
+      internalID: -4495169108258852990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_22
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baedffb8c5fcfc200800000000000000
+      internalID: 202608504647704235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_23
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899d0a0e7c524d1c0800000000000000
+      internalID: -4479914188929443432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fotos_Boton_15_24
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 12
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7663e7d4635e480800000000000000
+      internalID: -8870624184578447456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
