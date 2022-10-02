@@ -16,12 +16,20 @@ public class JumpKing : MonoBehaviour
 
     public GameManager gameManager;
 
+
+    private FlashChanging flashChanging;
+    public Color flashColor;
+
     public Animator animator;
+    public AllIn1Shader allIn1Shader;
+    private Material mat;
     [SerializeField] private AudioSource jumpSoundEffect;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        flashChanging = gameObject.GetComponent<FlashChanging>();
+        mat = gameObject.GetComponent<SpriteRenderer>().material;
     }
 
     void Update()
@@ -64,6 +72,10 @@ public class JumpKing : MonoBehaviour
         // carga el jumpvalue mientras dejes el espacio precionado y estes en ground
         if (Input.GetKey("space") && isGrounded && canJump)
         {
+            mat.SetFloat("(_HologramStripesAmount", 0.40f);
+
+
+            //flashChanging.Flash(flashColor);
             jumpValue += 12f * Time.deltaTime;
             animator.SetBool("IsCharging", true);
 
