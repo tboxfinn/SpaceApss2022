@@ -74,6 +74,7 @@ public class JumpKing : MonoBehaviour
             float tempy = jumpValue;
             rb.velocity = new Vector2(tempx, tempy);
             Invoke("ResetJump", 0.2f);
+
         }
 
         if (Input.GetKeyUp("space"))
