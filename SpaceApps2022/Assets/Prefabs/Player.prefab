@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8020042012016940837}
+  - component: {fileID: 1180251820079545806}
   - component: {fileID: 8020042012016940836}
   - component: {fileID: 8020042012016940839}
   - component: {fileID: 8020042012016940838}
-  - component: {fileID: 8020042012016940833}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,13 +28,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8020042012016940832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.69, y: -2.69, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8020042012515969448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180251820079545806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020042012016940832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f9320f451da3b4391b91fcbe96d832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 6
+  isGrounded: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  bounceMat: {fileID: 6200000, guid: 8b9ee6eca12880f42a2e3cdbd7bed506, type: 2}
+  normalMat: {fileID: 6200000, guid: ae119feb4032bdf4fa737630315bc3b3, type: 2}
+  canJump: 1
+  jumpValue: 0
 --- !u!212 &8020042012016940836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,31 +154,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8020042012016940833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8020042012016940832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cffb16b86384e8446ba0c9c2d046df7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  jumpForce: 0
-  isGrounded: 0
-  feetPos: {fileID: 8020042012515969448}
-  checkRadius: 0.5
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  jumpTime: 0
-  preJump: 0
-  bounceMat: {fileID: 6200000, guid: c9da916974759c146b8576e87d0b607a, type: 2}
-  normalMat: {fileID: 6200000, guid: c6b65419cc7e2604d83c333539720d71, type: 2}
-  limite: 22
 --- !u!1 &8020042012515969451
 GameObject:
   m_ObjectHideFlags: 0
