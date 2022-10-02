@@ -111,5 +111,19 @@ public class JumpKing : MonoBehaviour
         Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f), new Vector2(0.9f, 0.2f));
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = collision.transform;
+        }
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = null;
+        }
+    }
 }
