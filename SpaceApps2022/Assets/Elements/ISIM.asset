@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: ISIM
   m_EditorClassIdentifier: 
   itemName: INTEGRATED SCIENCE INSTRUMENT MODULE (ISIM)
+  ItemNameSpanish: Becker me la pela
   itemDescription: This is the heart of the James Webb Space Telescope! It houses
     the four main instruments that will detect light from distant stars and galaxies,
     and planets orbiting other stars, how cool is that?
+  itemDescriptionSpanish: jejeejejjejejejej
   itemImage: {fileID: 21300000, guid: 9a65aa4ef3acb3948a45e3de187b6b05, type: 3}
   itemImage2: {fileID: 21300000, guid: ab24d8a13fd1da54ab43084f2ac135c2, type: 3}

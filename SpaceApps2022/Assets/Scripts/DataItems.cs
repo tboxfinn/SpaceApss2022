@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class DataItems : ScriptableObject
 {
     public string itemName;
+    public string ItemNameSpanish;
     public string itemDescription;
+    public string itemDescriptionSpanish;
     public Sprite itemImage;
     public Sprite itemImage2;
 }

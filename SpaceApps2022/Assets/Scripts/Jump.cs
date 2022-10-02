@@ -9,7 +9,6 @@ public class Jump : MonoBehaviour
     private float moveInput;
 
     [SerializeField] private GameManager gameManager;
-    private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
     //PanelControl
@@ -29,7 +28,6 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        isGrounded = true;
 
         if (Input.GetKeyDown(KeyCode.Space) && GameManager.OnPanel == false)
         {

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: CONGRATULATONS
   m_EditorClassIdentifier: 
   itemName: CONGRATULATONS!!!!
+  ItemNameSpanish: felicidades!!!
   itemDescription: CONGRATULATIONS! You've completed one of the most ambitious missions
     on the NASA's history. We're so proud!!!
+  itemDescriptionSpanish: Has logrado completar una de las misiones mas ambiciosas
+    de la historia de la Nasa, estamos muy orgullosos de ti!!!
   itemImage: {fileID: 21300000, guid: 23b4efc6936e93b4c9f9ebaea12f364d, type: 3}
   itemImage2: {fileID: 0}
