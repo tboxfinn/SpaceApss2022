@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         if (pieces >= 8)
         {
             PanelWin.SetActive(true);
-            TitleText2.text = data.itemDescription;
+            TitleText2.text = data.itemName;
             DescriptionText2.text = data.itemDescription;
             SecondImage.GetComponent<Image>().sprite = data.itemImage;
             SecondImage2.GetComponent<Image>().sprite = data.itemImage2;
