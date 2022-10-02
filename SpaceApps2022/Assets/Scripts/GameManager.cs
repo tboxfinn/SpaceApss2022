@@ -8,16 +8,12 @@ public class GameManager : MonoBehaviour
 {
 
     //PanelControl
-    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text;
+    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleText2, DescriptionText2;
     //images Panel
-    public GameObject panel;
-    public GameObject PanelContent;
-    public GameObject image;
-    public GameObject image2;
+    public GameObject panel, PanelContent, PanelWin, image, image2,SecondImage, SecondImage2, Congratulations;
     public static bool OnPanel;
     public Animator Panel_anim;
-    public float timer;
-
+    public int pieces;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,23 +26,37 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (pieces == 7)
+        {
+            Congratulations.SetActive(true);
+        }
     }
 
     public void Display(DataItems data)
     {
+        pieces += 1;
         panel.SetActive(true);
         Title_Text.text = data.itemName;
         Description_Text.text = data.itemDescription;
         image.GetComponent<Image>().sprite = data.itemImage;
         image2.GetComponent<Image>().sprite = data.itemImage2;
-        PanelContent.SetActive(true);
+        if (pieces != 8)
+        {
+            PanelContent.SetActive(true);
+        }
         Time.timeScale = 0;
         OnPanel = true;
-        timer = 0;
+        if (pieces >= 8)
+        {
+            PanelWin.SetActive(true);
+            TitleText2.text = data.itemDescription;
+            DescriptionText2.text = data.itemDescription;
+            SecondImage.GetComponent<Image>().sprite = data.itemImage;
+            SecondImage2.GetComponent<Image>().sprite = data.itemImage2;
+
+        }
 
     }
-
     public void Closedisplay()
     {
         panel.SetActive(false);
