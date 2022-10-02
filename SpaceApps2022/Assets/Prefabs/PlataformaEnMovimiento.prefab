@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 84029390435459961}
   - component: {fileID: 84029390435459910}
   - component: {fileID: 84029390435459911}
-  - component: {fileID: 84029390435459960}
   m_Layer: 8
   m_Name: Plataforma_Roca
   m_TagString: PlataformaMovil
@@ -109,26 +108,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 4.559598, y: 0.76798344}
-  m_EdgeRadius: 0
---- !u!251 &84029390435459960
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84029390435459908}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RotationalOffset: 0
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 165
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
+  m_EdgeRadius: 0.1
 --- !u!1 &84029391140394791
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +159,7 @@ MonoBehaviour:
   StartPoint: {fileID: 84029391664012580}
   EndPoint: {fileID: 84029392125115272}
   Velocidad: 3
+  animator: {fileID: 0}
 --- !u!1 &84029391664012581
 GameObject:
   m_ObjectHideFlags: 0
