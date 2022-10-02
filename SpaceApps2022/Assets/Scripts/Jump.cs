@@ -22,6 +22,8 @@ public class Jump : MonoBehaviour
     public bool preJump = false;
     public PhysicsMaterial2D bounceMat, normalMat;
 
+    GameManager gameManager;
+
     private float direction = 1;
     [SerializeField] private float limite;
 
@@ -105,5 +107,6 @@ public class Jump : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
     }
 
-    
+
+
 }

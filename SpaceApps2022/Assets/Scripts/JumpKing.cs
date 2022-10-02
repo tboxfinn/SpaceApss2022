@@ -14,6 +14,8 @@ public class JumpKing : MonoBehaviour
     public bool canJump = true;
     public float jumpValue = 0.0f;
 
+    public GameManager gameManager;
+
     public Animator animator;
     [SerializeField] private AudioSource jumpSoundEffect;
 
@@ -125,6 +127,15 @@ public class JumpKing : MonoBehaviour
         if (collision.gameObject.tag == "PlataformaMovil")
         {
             transform.parent = null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("InfoItem"))
+        {
+            gameManager.Display(collision.gameObject.GetComponent<DataDisplay>().data);
+
         }
     }
 }

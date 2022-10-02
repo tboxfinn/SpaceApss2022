@@ -6,18 +6,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
-    //PanelControl
+    //Panels
+    public GameObject GamePanel, MenuPanel, PausePanel, InfoPanel, PanelContent;
+    //Panel Content
+    public GameObject PanelWin, image, image2, SecondImage, Congratulations, Player, SpanishBtnMenu, EnglishBtnMenu, SpanishBtnPause, EnglishBtnPause;
     [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleText2, DescriptionText2, piecesText, MenuTitle;
-    public int pieces;
- 
-    //images Panel & Game Panel
-    public GameObject GamePanel, MenuPanel, PausePanel, PanelWin, image, image2,SecondImage, Congratulations, InfoPanel, PanelContent, Player, SpanishBtnMenu, EnglishBtnMenu, SpanishBtnPause, EnglishBtnPause;
+
+    //Other Stuff
     public static bool OnPanel, OnPause, OnMenu, OnGame, SpanishBool;
+    public int pieces;
     public Animator Panel_anim;
     public static string GameStat;
-    //images Panel
-    public GameObject[] images;
 
     // Start is called before the first frame update
     void Start()
@@ -92,6 +91,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             InfoPanel.SetActive(true);
             OnPanel = true;
+            PanelWin.SetActive(false);
+        }
+        else if (GameStat == "PanelWin")
+        {
+            PanelWin.SetActive(true);
         }
     }
 
@@ -115,9 +119,9 @@ public class GameManager : MonoBehaviour
             PanelContent.SetActive(true);
         }
 
-        if (pieces >= 8)
+        if (pieces >= 7)
         {
-            PanelWin.SetActive(true);
+            GameStat = "PanelWin";
             if (SpanishBool == false)
             {
                 TitleText2.text = data.itemName;
@@ -142,7 +146,7 @@ public class GameManager : MonoBehaviour
         PanelContent.SetActive(false);
         PanelWin.SetActive(false);
         GameStat = "InGame";
-
+        InGame();
         Time.timeScale = 1;
         OnPanel = false;
         GamePanel.SetActive(true);
