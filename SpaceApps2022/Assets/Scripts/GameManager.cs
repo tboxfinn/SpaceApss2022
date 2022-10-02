@@ -84,12 +84,17 @@ public class GameManager : MonoBehaviour
             PausePanel.SetActive(true);
             GamePanel.SetActive(false);
         }
+        else if (GameStat == "InfoPanel")
+        {
+            Time.timeScale = 0;
+            InfoPanel.SetActive(true);
+            OnPanel = true;
+        }
     }
 
     public void Display(DataItems data)
     {
         pieces += 1;
-        InfoPanel.SetActive(true);
         if (SpanishBool == false)
         {
             Title_Text.text = data.itemName;
@@ -106,26 +111,26 @@ public class GameManager : MonoBehaviour
         {
             PanelContent.SetActive(true);
         }
-        Time.timeScale = 0;
-        OnPanel = true;
+
         if (pieces >= 8)
         {
             PanelWin.SetActive(true);
             if (SpanishBool == false)
             {
-                Title_Text.text = data.itemName;
-                Description_Text.text = data.itemDescription;
+                TitleText2.text = data.itemName;
+                DescriptionText2.text = data.itemDescription;
             }
             else if (SpanishBool == true)
             {
-                Title_Text.text = data.ItemNameSpanish;
-                Description_Text.text = data.itemDescriptionSpanish;
+                TitleText2.text = data.ItemNameSpanish;
+                DescriptionText2.text = data.itemDescriptionSpanish;
             }
             SecondImage.GetComponent<Image>().sprite = data.itemImage;
 
         }
         piecesText.text = pieces + "/7";
         GamePanel.SetActive(false);
+        GameStat = "InfoPanel";
 
     }
     public void Closedisplay()
@@ -133,6 +138,7 @@ public class GameManager : MonoBehaviour
         InfoPanel.SetActive(false);
         PanelContent.SetActive(false);
         PanelWin.SetActive(false);
+        GameStat = "InGame";
 
         Time.timeScale = 1;
         OnPanel = false;
@@ -159,7 +165,7 @@ public class GameManager : MonoBehaviour
         EnglishBtnPause.SetActive(false);
         SpanishBtnPause.SetActive(true);
         SpanishBool = false;
-        MenuTitle.text = "La calva de Becker me prende";
+        MenuTitle.text = "James Webb Space Telescope";
     }
 
     public void Spanish()
@@ -167,8 +173,8 @@ public class GameManager : MonoBehaviour
         SpanishBtnPause.SetActive(false);
         EnglishBtnPause.SetActive(true);
         SpanishBtnMenu.SetActive(false);
-        EnglishBtnPause.SetActive(true);
+        EnglishBtnMenu.SetActive(true);
         SpanishBool = true;
-        MenuTitle.text = "csm becker";
+        MenuTitle.text = "Telescopio Espacial James Webb";
     }
 }
