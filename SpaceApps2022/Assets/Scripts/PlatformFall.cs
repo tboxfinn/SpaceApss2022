@@ -30,5 +30,12 @@ public class PlatformFall : MonoBehaviour
         //rb.isKinematic = false;
         sr.color = new Color(1, 1, 1, 0.0f);
         bc.enabled = false;
+        Invoke("RespawnPlatform", 2.5f);
+    }
+    private void RespawnPlatform()
+    {
+        //rb.isKinematic = true;
+        sr.color = new Color(1, 1, 1, 1.0f);
+        bc.enabled = true;
     }
 }

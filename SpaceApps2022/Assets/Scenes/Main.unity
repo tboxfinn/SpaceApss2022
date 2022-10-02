@@ -955,9 +955,11 @@ MonoBehaviour:
   normalMat: {fileID: 6200000, guid: ae119feb4032bdf4fa737630315bc3b3, type: 2}
   canJump: 1
   jumpValue: 0
+  gameManager: {fileID: 0}
   flashColor: {r: 0.9339623, g: 0.383277, b: 0.383277, a: 0.77254903}
   animator: {fileID: 976963600}
   allIn1Shader: {fileID: 976963606}
+  mat: {fileID: 0}
   jumpSoundEffect: {fileID: 976963604}
 --- !u!61 &976963599
 BoxCollider2D:
@@ -1193,7 +1195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976963597}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ec63b267b0d6ec4198b96a5dc1910c9, type: 3}
   m_Name: 

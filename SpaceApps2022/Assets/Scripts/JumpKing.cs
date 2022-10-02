@@ -22,7 +22,7 @@ public class JumpKing : MonoBehaviour
 
     public Animator animator;
     public AllIn1Shader allIn1Shader;
-    private Material mat;
+    [SerializeField] private Material mat;
     [SerializeField] private AudioSource jumpSoundEffect;
 
     void Start()
@@ -55,6 +55,8 @@ public class JumpKing : MonoBehaviour
         {
             rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
         }
+
+
         //esto checa que el jugador este en el suelo
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f),
         new Vector2(0.9f, 0.4f), 0f, groundMask);
@@ -72,24 +74,26 @@ public class JumpKing : MonoBehaviour
         // carga el jumpvalue mientras dejes el espacio precionado y estes en ground
         if (Input.GetKey("space") && isGrounded && canJump)
         {
-            mat.SetFloat("(_HologramStripesAmount", 0.40f);
+
 
 
             //flashChanging.Flash(flashColor);
             jumpValue += 12f * Time.deltaTime;
-            animator.SetBool("IsCharging", true);
+
 
         }
 
         if (Input.GetKeyDown("space") && isGrounded && canJump)
         {
+
             rb.velocity = new Vector2(0.0f, rb.velocity.y); //define la velocidad de y para el salto
             animator.SetBool("IsCharging", true);
         }
-
+        animator.SetFloat("Speed", rb.velocity.y);
         //cuando llega a 20f el jump value y esta en el suelo saltas
         if (jumpValue >= 20f && isGrounded)
         {
+            //animator.SetBool("JumpReleased", true);
             float tempx = moveInput * walkSpeed;
             float tempy = jumpValue;
             rb.velocity = new Vector2(tempx, tempy);
@@ -97,18 +101,23 @@ public class JumpKing : MonoBehaviour
             jumpSoundEffect.Play();
 
         }
-
+        animator.SetBool("IsGrounded", isGrounded);
         //si sueltas el espacio saltas
         if (Input.GetKeyUp("space"))
         {
+            animator.SetBool("IsCharging", false);
+
             if (isGrounded)
             {
+
                 rb.velocity = new Vector2(moveInput * walkSpeed, jumpValue);
                 jumpValue = 0.0f;
                 jumpSoundEffect.Play();
+
             }
+
             canJump = true;
-            animator.SetBool("IsCharging", false);
+
 
         }
     }
