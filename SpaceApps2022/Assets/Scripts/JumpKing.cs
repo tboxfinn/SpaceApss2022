@@ -26,9 +26,21 @@ public class JumpKing : MonoBehaviour
         
         moveInput = Input.GetAxisRaw("Horizontal");
 
+        if (moveInput > 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+
+        }else if (moveInput < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
         if (jumpValue == 0.0f && isGrounded)
         {
             rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+              
         }
 
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f),
@@ -46,11 +58,14 @@ public class JumpKing : MonoBehaviour
         if (Input.GetKey("space") && isGrounded && canJump)
         {
             jumpValue += 0.11f;
+            animator.SetBool("IsCharging", true);
+
         }
 
         if (Input.GetKeyDown("space") && isGrounded && canJump)
         {
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
+            animator.SetBool("IsCharging", true);
         }
 
         if (jumpValue >= 20f && isGrounded)
@@ -69,16 +84,18 @@ public class JumpKing : MonoBehaviour
                 jumpValue = 0.0f;
             }
             canJump = true;
+            animator.SetBool("IsCharging", false);
         }
     }
 
-    void ResetJump()
+    void ResetJump()  
     {
         canJump = false;
         jumpValue = 0;
+        animator.SetBool("IsCharging", false);
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected() //para chequear que ground este tocando el pisos
     {
         Gizmos.color = Color.green;
         Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f), new Vector2(0.9f, 0.2f));
