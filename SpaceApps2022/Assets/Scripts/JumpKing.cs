@@ -14,6 +14,7 @@ public class JumpKing : MonoBehaviour
     public bool canJump = true;
     public float jumpValue = 0.0f;
 
+    public Animator animator;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class JumpKing : MonoBehaviour
 
     void Update()
     {
+        
         moveInput = Input.GetAxisRaw("Horizontal");
 
         if (jumpValue == 0.0f && isGrounded)
@@ -29,7 +31,7 @@ public class JumpKing : MonoBehaviour
             rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
         }
 
-        isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f),
+        isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f),
         new Vector2(0.9f, 0.4f), 0f, groundMask);
 
         if (jumpValue > 0)
@@ -43,7 +45,7 @@ public class JumpKing : MonoBehaviour
 
         if (Input.GetKey("space") && isGrounded && canJump)
         {
-            jumpValue += 0.1f;
+            jumpValue += 0.11f;
         }
 
         if (Input.GetKeyDown("space") && isGrounded && canJump)
@@ -79,6 +81,6 @@ public class JumpKing : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f), new Vector2(0.9f, 0.2f));
+        Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1f), new Vector2(0.9f, 0.2f));
     }
 }
