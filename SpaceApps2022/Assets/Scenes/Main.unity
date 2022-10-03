@@ -923,8 +923,10 @@ GameObject:
   - component: {fileID: 976963600}
   - component: {fileID: 976963599}
   - component: {fileID: 976963598}
+  - component: {fileID: 976963605}
   - component: {fileID: 976963603}
   - component: {fileID: 976963604}
+  - component: {fileID: 976963606}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -953,7 +955,11 @@ MonoBehaviour:
   normalMat: {fileID: 6200000, guid: ae119feb4032bdf4fa737630315bc3b3, type: 2}
   canJump: 1
   jumpValue: 0
+  gameManager: {fileID: 0}
+  flashColor: {r: 0.9339623, g: 0.383277, b: 0.383277, a: 0.77254903}
   animator: {fileID: 976963600}
+  allIn1Shader: {fileID: 976963606}
+  mat: {fileID: 0}
   jumpSoundEffect: {fileID: 976963604}
 --- !u!61 &976963599
 BoxCollider2D:
@@ -1019,7 +1025,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 534cc8830122c8c4f89ef95ec003f467, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1182,6 +1188,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &976963605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976963597}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec63b267b0d6ec4198b96a5dc1910c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 534cc8830122c8c4f89ef95ec003f467, type: 2}
+  duration: 0
+--- !u!114 &976963606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976963597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrenght: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &1019665934
 GameObject:
   m_ObjectHideFlags: 0
