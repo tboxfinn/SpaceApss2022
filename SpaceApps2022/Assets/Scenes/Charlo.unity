@@ -3725,8 +3725,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.8955172, g: 0.9528302, b: 0.26517445, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 64fac63fa942b2d4eb7192a4098ed109, type: 3}
+  m_Color: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6598,7 +6598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 64fac63fa942b2d4eb7192a4098ed109, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7223,7 +7223,10 @@ MonoBehaviour:
   canJump: 1
   jumpValue: 0
   gameManager: {fileID: 659292084}
+  flashColor: {r: 0, g: 0, b: 0, a: 0}
   animator: {fileID: 1587841929}
+  allIn1Shader: {fileID: 0}
+  mat: {fileID: 0}
   jumpSoundEffect: {fileID: 1587841925}
 --- !u!70 &1587841928
 CapsuleCollider2D:
@@ -8615,7 +8618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1910712282
 RectTransform:
   m_ObjectHideFlags: 0
