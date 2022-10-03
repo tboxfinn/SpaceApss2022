@@ -13,4 +13,9 @@ public class DataDisplay : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void SpawnItems()
+    {
+        gameObject.SetActive(true);
+    }
 }
