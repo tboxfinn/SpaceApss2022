@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
     public void InMenu()
     {
         GameStat = "InMenu";
-        SceneManager.LoadScene("Charlo");
+        SceneManager.LoadScene("Main");
     }
     public void Pause()
     {
