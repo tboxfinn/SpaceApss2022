@@ -1182,24 +1182,29 @@ MonoBehaviour:
   PausePanel: {fileID: 1837186093}
   InfoPanel: {fileID: 1812128856}
   PanelContent: {fileID: 2003781803}
+  GalleryPanel: {fileID: 0}
   PanelWin: {fileID: 1432877282}
   image: {fileID: 2111838292}
   image2: {fileID: 1673348305}
-  SecondImage: {fileID: 1832837242}
-  Congratulations: {fileID: 432635945}
+  imageWin: {fileID: 0}
+  ItemWin: {fileID: 0}
   Player: {fileID: 976963597}
   SpanishBtnMenu: {fileID: 1286416161}
   EnglishBtnMenu: {fileID: 909030103}
   SpanishBtnPause: {fileID: 214852594}
   EnglishBtnPause: {fileID: 2011681399}
+  GalleryBackground: []
   Title_Text: {fileID: 1249347148}
   Description_Text: {fileID: 1912713052}
-  TitleText2: {fileID: 1849384388}
-  DescriptionText2: {fileID: 1778171286}
+  TitleTextWin: {fileID: 0}
+  DescriptionTextWin: {fileID: 0}
   piecesText: {fileID: 327788578}
   MenuTitle: {fileID: 1367047130}
+  TitleGallery: {fileID: 0}
   pieces: 0
+  GalleryIndex: 0
   Panel_anim: {fileID: 1812128857}
+  GameStat: 
 --- !u!4 &324617095
 Transform:
   m_ObjectHideFlags: 0
@@ -1840,8 +1845,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.8955172, g: 0.9528302, b: 0.26517445, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6ec700d7945e7714d8bde23819765051, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2536,7 +2541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6ec700d7945e7714d8bde23819765051, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
