@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     //Panels
-    public GameObject GamePanel, MenuPanel, PausePanel, InfoPanel, PanelContent;
+    public GameObject GamePanel, MenuPanel, PausePanel, InfoPanel, PanelContent, GalleryPanel;
     //Panel Content
-    public GameObject PanelWin, image, image2, SecondImage, Congratulations, Player, SpanishBtnMenu, EnglishBtnMenu, SpanishBtnPause, EnglishBtnPause;
-    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleText2, DescriptionText2, piecesText, MenuTitle;
+    public GameObject PanelWin, image, image2, imageWin, ItemWin, Player, SpanishBtnMenu, EnglishBtnMenu, SpanishBtnPause, EnglishBtnPause;
+    public GameObject[] GalleryBackground;
+    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleTextWin, DescriptionTextWin, piecesText, MenuTitle, TitleGallery;
 
     //Other Stuff
     public static bool OnPanel, OnPause, OnMenu, OnGame, SpanishBool;
-    public int pieces;
+    public int pieces, GalleryIndex;
     public Animator Panel_anim;
-    public static string GameStat;
+    public string GameStat;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
         GameStat = "InMenu";
         MenuPanel.SetActive(true);
         PausePanel.SetActive(false);
+        GalleryPanel.SetActive(false);
+        GalleryIndex = 0;
 
         //PanelControl
         InfoPanel.SetActive(false);
@@ -38,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if (pieces == 7)
         {
-            Congratulations.SetActive(true);
+            ItemWin.SetActive(true);
         }
         else if (pieces >= 8)
         {
@@ -59,14 +63,22 @@ public class GameManager : MonoBehaviour
             GameStat = "InMenu";
         }
 
+        //Gallery
+        if (GalleryIndex > 6)
+            GalleryIndex = 0;
+        else if (GalleryIndex < 0)
+            GalleryIndex = 6;
+
         if (GameStat == "InMenu")
         {
+            //items.SpawnItems();
             Time.timeScale = 1f;
             Player.SetActive(false);
             //Panel Control
             MenuPanel.SetActive(true);
             PausePanel.SetActive(false);
             GamePanel.SetActive(false);
+            GalleryPanel.SetActive(false);
         }
         else if (GameStat == "InGame")
         {
@@ -92,16 +104,61 @@ public class GameManager : MonoBehaviour
             InfoPanel.SetActive(true);
             OnPanel = true;
             PanelWin.SetActive(false);
+            if (pieces >= 8)
+                PanelWin.SetActive(true);
+            else if (pieces < 8)
+                PanelWin.SetActive(false);
         }
-        else if (GameStat == "PanelWin")
+        else if (GameStat == "InGallery")
         {
-            PanelWin.SetActive(true);
+            GalleryPanel.SetActive(true);
+            if (SpanishBool == true)
+            {
+                TitleGallery.text = "capturas del James webb";
+            }
+            else if (SpanishBool == false)
+            {
+                TitleGallery.text = "james webb's captures";
+            }
+
+            if (GalleryIndex == 0)
+            {
+                GalleryBackground[0].gameObject.SetActive(true);
+            }
         }
+    }
+
+    public void GalleryNext()
+    {
+        GalleryIndex += 1;
+
+        for (int i = 0;i < GalleryBackground.Length; i++)
+        {
+            GalleryBackground[i].gameObject.SetActive(false);
+            GalleryBackground[GalleryIndex].gameObject.SetActive(true);
+        }
+
+        Debug.Log(GalleryIndex);
+    }
+
+    public void GalleryPrevious()
+    {
+        GalleryIndex -= 1;
+
+        for (int i = 0; i < GalleryBackground.Length; i++)
+        {
+            GalleryBackground[i].gameObject.SetActive(false);
+            GalleryBackground[GalleryIndex].gameObject.SetActive(true);
+        }
+
+        Debug.Log(GalleryIndex);
     }
 
     public void Display(DataItems data)
     {
         pieces += 1;
+
+        //Booleano del español, si es true entonces el idioma del contenido será del español
         if (SpanishBool == false)
         {
             Title_Text.text = data.itemName;
@@ -119,20 +176,21 @@ public class GameManager : MonoBehaviour
             PanelContent.SetActive(true);
         }
 
-        if (pieces >= 7)
+        //Si las piezas son mayores o iguales a 8, entonces mostrará la pantalla de victoria
+        if (pieces >= 8)
         {
-            GameStat = "PanelWin";
+            PanelWin.SetActive(true);
             if (SpanishBool == false)
             {
-                TitleText2.text = data.itemName;
-                DescriptionText2.text = data.itemDescription;
+                TitleTextWin.text = data.itemName;
+                DescriptionTextWin.text = data.itemDescription;
             }
             else if (SpanishBool == true)
             {
-                TitleText2.text = data.ItemNameSpanish;
-                DescriptionText2.text = data.itemDescriptionSpanish;
+                TitleTextWin.text = data.ItemNameSpanish;
+                DescriptionTextWin.text = data.itemDescriptionSpanish;
             }
-            SecondImage.GetComponent<Image>().sprite = data.itemImage;
+            imageWin.GetComponent<Image>().sprite = data.itemImage;
 
         }
         piecesText.text = pieces + "/7";
@@ -140,7 +198,10 @@ public class GameManager : MonoBehaviour
         GameStat = "InfoPanel";
 
     }
-    public void Closedisplay()
+
+
+    //cierra el panel de información
+    public void CloseInfoPanel()
     {
         InfoPanel.SetActive(false);
         PanelContent.SetActive(false);
@@ -159,10 +220,15 @@ public class GameManager : MonoBehaviour
     public void InMenu()
     {
         GameStat = "InMenu";
+        SceneManager.LoadScene("Charlo");
     }
     public void Pause()
     {
         GameStat = "InPause";
+    }
+    public void OpenGallery()
+    {
+        GameStat = "InGallery";
     }
 
     public void English()
@@ -184,4 +250,7 @@ public class GameManager : MonoBehaviour
         SpanishBool = true;
         MenuTitle.text = "el viaje de webb";
     }
+
+
+
 }
