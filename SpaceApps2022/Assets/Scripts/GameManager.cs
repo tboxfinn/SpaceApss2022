@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //Panels
-    public GameObject GamePanel, MenuPanel, PausePanel, InfoPanel, PanelContent, GalleryPanel;
+    public GameObject GamePanel, MenuPanel, PausePanel, InfoPanel, PanelContent, GalleryPanel, ControlPanel;
     //Panel Content
     public GameObject PanelWin, image, image2, imageWin, ItemWin, Player, SpanishBtnMenu, EnglishBtnMenu, SpanishBtnPause, EnglishBtnPause;
     public GameObject[] GalleryBackground;
-    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleTextWin, DescriptionTextWin, piecesText, MenuTitle, TitleGallery;
+    [SerializeField] private TextMeshProUGUI Title_Text, Description_Text, TitleTextWin, DescriptionTextWin, piecesText, MenuTitle, TitleGallery, TitleGamePanel,Description1GamePanel, Description2GamePanel;
 
     //Other Stuff
     public static bool OnPanel, OnPause, OnMenu, OnGame, SpanishBool;
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
             PausePanel.SetActive(false);
             GamePanel.SetActive(false);
             GalleryPanel.SetActive(false);
+            ControlPanel.SetActive(false);
         }
         else if (GameStat == "InGame")
         {
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
             MenuPanel.SetActive(false);
             PausePanel.SetActive(false);
             GamePanel.SetActive(true);
+            ControlPanel.SetActive(false);
         }
         else if (GameStat == "InPause")
         {
@@ -124,6 +126,24 @@ public class GameManager : MonoBehaviour
             if (GalleryIndex == 0)
             {
                 GalleryBackground[0].gameObject.SetActive(true);
+            }
+        }
+        else if (GameStat == "ControlPanel")
+        {
+            ControlPanel.SetActive(true);
+            GamePanel.SetActive(false);
+            MenuPanel.SetActive(false);
+            if (SpanishBool == true)
+            {
+                TitleGamePanel.text = "Controles de Juego";
+                Description1GamePanel.text = "Movimiento del Jugador";
+                Description2GamePanel.text = "Salto del Jugador: manten presionado para cargar fuerza de Saldto";
+            }
+            else if (SpanishBool == false)
+            {
+                TitleGamePanel.text = "Game Controllers";
+                Description1GamePanel.text = "Player Movement";
+                Description2GamePanel.text = "player Jump: Hold down to charge Jump Force";
             }
         }
     }
@@ -229,6 +249,10 @@ public class GameManager : MonoBehaviour
     public void OpenGallery()
     {
         GameStat = "InGallery";
+    }
+    public void OncontrolPanel()
+    {
+        GameStat = "ControlPanel";
     }
 
     public void English()
