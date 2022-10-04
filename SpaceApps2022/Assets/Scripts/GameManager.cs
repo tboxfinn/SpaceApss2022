@@ -255,6 +255,11 @@ public class GameManager : MonoBehaviour
         GameStat = "ControlPanel";
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void English()
     {
         EnglishBtnMenu.SetActive(false);
