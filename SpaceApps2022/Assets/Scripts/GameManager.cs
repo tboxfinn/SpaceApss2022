@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             {
                 TitleGamePanel.text = "Controles de Juego";
                 Description1GamePanel.text = "Movimiento del Jugador";
-                Description2GamePanel.text = "Salto del Jugador: manten presionado para cargar fuerza de Saldto";
+                Description2GamePanel.text = "Salto del Jugador: manten presionado para cargar fuerza de Salto";
             }
             else if (SpanishBool == false)
             {
